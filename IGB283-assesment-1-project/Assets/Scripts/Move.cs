@@ -5,11 +5,12 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     IGB283Transform iGB283Transform = new IGB283Transform();
-    // Start is called before the first frame update
-
+    
     public float angle;
     public Vector3 movement = new Vector3(1.0f,0f,0f);
     public Vector3 oldPos;
+
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -18,7 +19,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        oldPos = this.gameObject.GetComponent<Renderer>().bounds.extents;
+        oldPos = transform.GetComponent<Renderer>().bounds.center;
         Mesh mesh = GetComponent<MeshFilter>().mesh;
 
         Vector3[] vertices = mesh.vertices;
