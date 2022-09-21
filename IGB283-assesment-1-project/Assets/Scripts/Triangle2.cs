@@ -1,21 +1,18 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Triangle : MonoBehaviour
+public class Triangle2 : MonoBehaviour
 {
     public Material material;
 
-    private void Awake()
-    {
-        gameObject.AddComponent<MeshFilter>();
-        gameObject.AddComponent<MeshRenderer>();
-    }
+
     void Start()
     {
         // Add a MeshFilter and MeshRenderer to the TriangleMesh (GameObject)
 
-        
-        
+        gameObject.AddComponent<MeshFilter>();
+        gameObject.AddComponent<MeshRenderer>();
         // Get the Mesh from MeshFilter
         Mesh mesh = GetComponent<MeshFilter>().mesh;
         // Set the material to material 
@@ -23,7 +20,7 @@ public class Triangle : MonoBehaviour
         // Clear all vertex and index data from the mesh
         mesh.Clear();
         // Create a triangle with the Points
-       
+
 
         mesh.vertices = new Vector3[] {
             //Triangle 1
@@ -91,15 +88,13 @@ public class Triangle : MonoBehaviour
             new Color(0.8f, 0.3f, 0.3f, 1.0f),
             new Color(0.8f, 0.3f, 0.3f, 1.0f),
             new Color(0.8f, 0.3f, 0.3f, 1.0f),
-            
+
 
 
 
         };
         // Set vertex indicies
-        mesh.triangles = new int[] { 0, 1, 2, 2, 1, 4, 2, 4, 3 , 5, 6, 7, 5, 8, 7, 5, 9, 8, 6, 10, 7, 11, 12, 13, 14, 15, 16, 
+        mesh.triangles = new int[] { 0, 1, 2, 2, 1, 4, 2, 4, 3 , 5, 6, 7, 5, 8, 7, 5, 9, 8, 6, 10, 7, 11, 12, 13, 14, 15, 16,
             15, 16, 12, 12, 13, 16, 13, 16, 17, 13, 18, 17 };
     }
 }
-
-
