@@ -302,7 +302,19 @@ public class IGB283Transform : MonoBehaviour
 		return true;
 	}
 
-	public IGB283Transform Rotate(float angle)
+    public IGB283Transform Scale(float scale)
+    {
+        //create new matrix
+        IGB283Transform matrix = new IGB283Transform();
+        //set the rows
+        matrix.SetRow(0, new Vector3(scale, 0.0f, 0.0f));
+        matrix.SetRow(1, new Vector3(0.0f, scale, 0.0f));
+        matrix.SetRow(2, new Vector3(0.0f, 0.0f, 1.0f));
+
+        return matrix;
+    }
+
+    public IGB283Transform Rotate(float angle)
 	{
 		//create new matrix
 		IGB283Transform matrix = new IGB283Transform();

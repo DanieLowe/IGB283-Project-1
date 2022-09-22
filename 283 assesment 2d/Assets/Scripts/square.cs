@@ -5,11 +5,8 @@ using UnityEngine;
 public class square : MonoBehaviour
 {
     public Material material;
-    public GameObject selectedObject;
-    
-    
-
-    IGB283Transform iGB283Transform = new IGB283Transform();
+    public GameObject selectedObject;  
+        
     private void Awake()
     {
         gameObject.AddComponent<MeshFilter>();

@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnobChangeColourassesment : MonoBehaviour
+
+public class ShieldColourMove : MonoBehaviour
 {
     private bool isMoving = false;
-    public Vector3 objpos;
-    public Vector3 mousepos;
+    protected Vector3 objpos;
+    protected Vector3 mousepos;
     IGB283Transform iGB283Transform = new IGB283Transform();
+    
+    public AudioSource[] audioSource = new AudioSource[2];
+    public AudioClip[] audioClip = new AudioClip[2];
     // Start is called before the first frame update
     void Start()
     {
+        audioClip[0] = Resources.Load<AudioClip>("ShieldSound");
 
+        audioSource[0] = this.GetComponent<AudioSource>();
+
+        audioSource[0].clip = audioClip[0];
     }
 
     // Update is called once per frame
@@ -19,25 +27,14 @@ public class KnobChangeColourassesment : MonoBehaviour
     {
         MouseClickAction();
         Move();
-        ChangeKnobColour();
+        
 
         objpos = transform.GetComponent<Renderer>().bounds.center;
         mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     // Change the colour of the object
-    void ChangeKnobColour()
-    {
-        if (Input.GetKeyDown("q"))
-        {
-            GetComponent<SpriteRenderer>().color = Color.white;
-        }
-
-        if (Input.GetKeyDown("w"))
-        {
-            GetComponent<SpriteRenderer>().color = Color.green;
-        }
-    }
+    
 
     void Move()
     {
@@ -60,6 +57,7 @@ public class KnobChangeColourassesment : MonoBehaviour
             
 
             mesh.RecalculateBounds();
+
         }            
         
     }
@@ -79,7 +77,14 @@ public class KnobChangeColourassesment : MonoBehaviour
         {
             Debug.Log("true");
             isMoving = true;
-            
+            float f1 = Random.Range(0f, 1f);
+            float f2 = Random.Range(0f, 1f);
+            float f3 = Random.Range(0f, 1f);
+            float f4 = Random.Range(0f, 1f);
+
+            ColourChange(new Color(f1, f2, f3, 1.0f));
+            audioSource[0].Play();
+
         }
     }
 
@@ -96,4 +101,18 @@ public class KnobChangeColourassesment : MonoBehaviour
             Debug.Log("false");
         }
     }
+
+    void ColourChange (Color newcolor)
+    {
+        Mesh mesh = GetComponent<MeshFilter>().mesh;
+        Color[] colors = mesh.colors;
+        for (int i = 0; i < colors.Length; i++)
+        {
+            colors[i] = newcolor; 
+        }
+        mesh.colors = colors;
+        
+    }
+
+    
 }
