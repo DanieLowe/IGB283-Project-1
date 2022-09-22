@@ -971,10 +971,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2123522975}
   m_HandleRect: {fileID: 746533887}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 200
+  m_MinValue: 2
+  m_MaxValue: 30
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1008,13 +1008,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125ed67e81be5dc48909d3f0eafdc37b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 10
-  startPos: {x: 160, y: 30, z: 0}
   target1: {fileID: 723104501}
   target2: {fileID: 1861009091}
-  speedSlider: {fileID: 0}
-  spinSlider: {fileID: 0}
-  speed: 100
+  speedSlider: {fileID: 1453612819}
+  spinSlider: {fileID: 565284098}
 --- !u!114 &589033546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,10 +2151,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 886668875}
   m_HandleRect: {fileID: 365667658}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 200
+  m_MinValue: 20
+  m_MaxValue: 150
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2282,10 +2279,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 983291214}
   m_HandleRect: {fileID: 452762160}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 200
+  m_MinValue: 20
+  m_MaxValue: 150
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2410,10 +2407,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 745169590}
   m_HandleRect: {fileID: 68369712}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 200
+  m_MinValue: 2
+  m_MaxValue: 30
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2612,13 +2609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125ed67e81be5dc48909d3f0eafdc37b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 10
-  startPos: {x: 160, y: 30, z: 0}
   target1: {fileID: 643128898}
   target2: {fileID: 869594716}
-  speedSlider: {fileID: 0}
-  spinSlider: {fileID: 0}
-  speed: 100
+  speedSlider: {fileID: 1483889080}
+  spinSlider: {fileID: 1711023087}
 --- !u!114 &2011210500
 MonoBehaviour:
   m_ObjectHideFlags: 0
