@@ -50,7 +50,7 @@ public class KnobChangeColourassesment : MonoBehaviour
 
             Vector3[] vertices = mesh.vertices;
 
-            IGB283Transform M = iGB283Transform.TranslateX((mousePosition - oldPos).normalized * Time.deltaTime * 50);
+            IGB283Transform M = iGB283Transform.TranslateX((mousePosition - oldPos).normalized * Time.deltaTime * 200);
             for (int i = 0; i < vertices.Length; i++)
             {
                 vertices[i] = M.MultiplyPoint(vertices[i]);
